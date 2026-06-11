@@ -1,0 +1,11 @@
+transaction_id,customer_id,transaction_date,amount,merchant_name,payment_method,status
+TXN001,CUST001,2026-06-01,120.50,Walmart,Credit Card,Completed
+TXN002,CUST002,2026-06-01,75.25,Amazon,Debit Card,Completed
+TXN003,CUST003,2026-06-02,300.00,Best Buy,Credit Card,Completed
+TXN004,CUST001,2026-06-02,45.99,Starbucks,Debit Card,Completed
+TXN005,CUST004,2026-06-03,999.99,Apple Store,Credit Card,Pending
+TXN006,CUST005,2026-06-03,15.75,McDonalds,Debit Card,Completed
+TXN007,CUST002,2026-06-04,210.10,Target,Credit Card,Completed
+TXN008,CUST006,2026-06-04,500.00,Costco,Credit Card,Failed
+TXN009,CUST007,2026-06-05,89.49,Uber,Debit Card,Completed
+TXN010,CUST008,2026-06-05,650.00,Home Depot,Credit Card,Completed
