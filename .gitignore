@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+*.env
+
+# GCP credentials
+*.json
+service-account-key.json
+
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+
+# Raw/generated data
+data/raw/
+data/output/
