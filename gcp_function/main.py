@@ -25,11 +25,25 @@ def ingest_transactions(request):
     bq_dataset = os.environ.get("BQ_DATASET")
     bq_table = os.environ.get("BQ_TABLE")
 
-    if not all([external_api_url, api_key, gcs_bucket_name, bq_dataset, bq_table]):
+    required_env_vars = {
+        "EXTERNAL_API_URL": external_api_url,
+        "API_KEY": api_key,
+        "GCS_BUCKET_NAME": gcs_bucket_name,
+        "BQ_DATASET": bq_dataset,
+        "BQ_TABLE": bq_table,
+    }
+
+    missing_env_vars = [
+        name for name, value in required_env_vars.items()
+        if not value
+    ]
+
+    if missing_env_vars:
         return (
             json.dumps({
                 "status": "error",
-                "message": "Missing one or more required environment variables."
+                "message": "Missing required environment variables.",
+                "missing_env_vars": missing_env_vars
             }),
             500,
             {"Content-Type": "application/json"},
